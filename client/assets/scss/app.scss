@@ -1,2 +1,13 @@
 @import "settings";
 @import "foundation";
+
+body {
+	background-color: #3498DB;
+}
+
+.link {
+	margin-right: 10px;
+	&.active, &:hover {
+		border-bottom: 1px dotted white; 
+	}
+}

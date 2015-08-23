@@ -13,12 +13,18 @@
   <body>
     <div class="grid-frame vertical">
       <div class="grid-content shrink" style="padding: 0;">
-        <ul class="primary condense menu-bar">
-          <li><a><strong>Foundation for Apps</strong></a></li>
-        </ul>
+        <div class="title-bar primary" data-ng-controller="header">
+          <span class="title left">Donation App</span>
+          <span class="right">
+            <a class="link"  data-ng-repeat="page in pages" ng-class="{active: $state.includes(page.state)}" data-ng-click="page.click()">{{page.title}}</a>
+
+
+          </span>
+        </div>
       </div>
       <div ui-view class="grid-content">
       </div>
     </div>
+    <script id="digits-sdk" src="https://cdn.digits.com/1/sdk.js" async></script>
   </body>
 </html>
